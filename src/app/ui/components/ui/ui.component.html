@@ -1,8 +1,14 @@
 <header class="fixed-top">
-
-
+  <!-- projetter instance de header component -->
+  <span *ngIf="open" (click)="toggle()">
+    <ng-content select=".tr-icon-close"></ng-content>
+  </span>
+  <span *ngIf="!open" (click)="toggle()">
+    <ng-content select=".tr-icon-nav"></ng-content>
+  </span>
+  <ng-content select=".tr-header"></ng-content>
 </header>
-<main>
+<main [ngClass]="{'close-aside': !open}">
 
   <div class="shadow position-fixed">
 
@@ -11,8 +17,8 @@
   <aside>
     <div class="scroller">
 
-
-
+      <!-- projetter instance de nav component -->
+      <ng-content select=".tr-nav"></ng-content>
     </div>
   </aside>
 
@@ -20,14 +26,14 @@
 
     <div class="contents">
 
-
+      <!-- projetter router instancie dynamiquement des components -->
 
     </div>
 
     <footer>
 
-
-
+      <!-- projetter instance de footer component -->
+      <ng-content select=".tr-footer"></ng-content>
     </footer>
 
   </div>
