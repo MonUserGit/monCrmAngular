@@ -1,6 +1,6 @@
-☐ router angular
-☐ ui agile
-☐ templates agile
-☐ @Input()
-☐ generate doc
-☐ analyse du bundle
+✔ router angular @done(21-03-30 14:14)
+✔ ui agile @done(21-03-30 15:20)
+✔ templates agile @done(21-03-30 15:20)
+✔ @Input() @done(21-03-30 15:21)
+✔ generate doc @done(21-03-30 15:54)
+✔ analyse du bundle @done(21-03-30 15:54)
