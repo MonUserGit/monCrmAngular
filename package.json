@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "doc": "compodoc -p tsconfig.json -o -s",
-    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/crm-atos-avril/stats.json"
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/crm-atos-avril/stats.json",
+    "jsonServer": "json-server --watch mock_db/db.json"
   },
   "private": true,
   "dependencies": {

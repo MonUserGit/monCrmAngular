@@ -1,9 +1,12 @@
-<app-template-full-width [title]="title">
+<app-template-full-width [title]="title" *ngIf="col">
   <button (click)="translateFr()">Translate title fr</button>
+
+  <app-table-light [collection]="col" [headers]="headers"></app-table-light>
 
   <app-btn label="Add Order" route="add"></app-btn>
   <app-btn label="CoderbaseIT" hrefLink="http://coderbase.io"></app-btn>
   <app-btn label="Open PopUp" [action]="true" (clicked)="openPopUp()"></app-btn>
+
 </app-template-full-width>
 
 
