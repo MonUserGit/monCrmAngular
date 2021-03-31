@@ -1,7 +1,17 @@
 <app-template-full-width [title]="title" *ngIf="col">
   <button (click)="translateFr()">Translate title fr</button>
-
-  <app-table-light [collection]="col" [headers]="headers"></app-table-light>
+  <!-- {{ col | json }} -->
+  <app-table-light [headers]="headers">
+    <tr *ngFor="let item of col">
+      <td>{{ item.typePresta }}</td>
+      <td>{{ item.client | uppercase }}</td>
+      <td>{{ item.nbJours }}</td>
+      <td>{{ item.tjmHt | currency }}</td>
+      <td>{{ item.tjmHt | total: item.nbJours | currency }}</td>
+      <td>{{ item.tjmHt | total: item.nbJours: item.tva | currency }}</td>
+      <td>{{ item.state }}</td>
+    </tr>
+  </app-table-light>
 
   <app-btn label="Add Order" route="add"></app-btn>
   <app-btn label="CoderbaseIT" hrefLink="http://coderbase.io"></app-btn>
