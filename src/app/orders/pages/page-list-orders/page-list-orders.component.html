@@ -1,4 +1,4 @@
-<app-template-full-width [title]="title" *ngIf="col">
+<app-template-full-width [title]="title" *ngIf="col$ | async as col">
   <button (click)="translateFr()">Translate title fr</button>
   <!-- {{ col | json }} -->
   <app-table-light [headers]="headers">
