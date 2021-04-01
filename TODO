@@ -4,3 +4,32 @@
 ✔ @Input() @done(21-03-30 15:21)
 ✔ generate doc @done(21-03-30 15:54)
 ✔ analyse du bundle @done(21-03-30 15:54)
+
+page list client (récupérer la collection clients)
+  ☐ créer un enum (ACTIVE , INACTIVE) state-client
+  ☐ créer une interface client-i
+  ☐ créer le model (ng g class client)
+    ☐ default value state = ACTIVE (en utilisant l'enum)
+    ☐ default value tva = 20
+    ☐ default value totalCaHT = 0
+  ☐ créer le service clients
+    ☐ prendre ex sur OrdersService appel http (.../clients)
+  ☐ pagelistclientscomponent.ts récupérer la flux de donné retourné par l'appel http présent sur votre service
+    ☐ injecter votre service clients dans le constructor
+    ☐ créer un variable de type Client[]
+    ☐ initialiser votre variable dans le subscribe() de this.clientsService.collection
+  ☐ page list clients html
+    ☐ utiliser app template full width en changeant le title
+    ☐ utiliser app table light
+      ☐ afficher dans le tableau : le name, le total ca ht, le taux tva, le total ttc (a calculer avec le meme pipe total), le state
+      ☐ on peut changer de state directement dans le tableau
+      ☐ utiliser app btn pour une redirection vers la route clients/add
+  ☐ page list clients ts
+    ☐ declarer changeState() et faire le subscribe()
+
+
+    ☐ TP VERSION
+      ☐ Afficher dans le template du header un numéro de version (1)
+      ☐ nav le template de nav component ajouter un bouton qui incrémente le numéro de version
+      ☐ Afficher dans le template du footer le meme numéro de version
+      ☐ quand on clique sur le bouton pour incrémenter le num de version, il doit se mettre à jour dans le header et dans le footer

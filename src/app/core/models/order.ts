@@ -15,4 +15,10 @@ export class Order implements OrderI {
       Object.assign(this, param);
     }
   }
+  totalTTC(): number {
+    return this.tjmHt * this.nbJours * (1 + this.tva / 100);
+  }
+  totalHT(): number {
+    return this.tjmHt * this.nbJours;
+  }
 }
