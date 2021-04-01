@@ -2,7 +2,7 @@
   <button (click)="translateFr()">Translate title fr</button>
   <!-- {{ col | json }} -->
   <app-table-light [headers]="headers">
-    <tr *ngFor="let item of col">
+    <tr #line *ngFor="let item of col" (click)="test()">
       <td>{{ item.typePresta }}</td>
       <td>{{ item.client | uppercase }}</td>
       <td>{{ item.nbJours }}</td>
